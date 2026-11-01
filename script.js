@@ -4,14 +4,12 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-	const pricess=document.querySelectorAll('.prices');
+	const prices=document.querySelectorAll('.prices');
 	let sum=0;
-	pricess.forEach(priceElement =>{
+	prices.forEach(priceElement =>{
 		sum+=Number(priceElement.textContent);
 	});
-	if(document.querySelector('[data-ns-test="grandTotal"]')){
-		return;
-	}
+	
 	const table=document.createElement('table');
   const newRow=document.createElement('tr');
 	const newCell=document.createElement('td');
@@ -21,5 +19,5 @@ const getSum = () => {
 	table.appendChild(newRow);
 };
 
-getSumBtn.addEventListener("click", getSum);
+//getSumBtn.addEventListener("click", getSum);
 
