@@ -10,7 +10,7 @@ const getSum = () => {
 		sum+=Number(priceElement.textContent);
 	});
 	
-	const table=document.createElement('table');
+	const table=document.querySelector('table');
   const newRow=document.createElement('tr');
 	const newCell=document.createElement('td');
 	newCell.setAttribute('data-ns-test','grandTotal');
@@ -19,5 +19,5 @@ const getSum = () => {
 	table.appendChild(newRow);
 };
 
-//getSumBtn.addEventListener("click", getSum);
+getSumBtn.addEventListener("click", getSum);
 
